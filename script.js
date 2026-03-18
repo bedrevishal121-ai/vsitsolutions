@@ -88,71 +88,86 @@ function loadClients() {
     });
 }
 
-function checkPass() {
+// --- ADMIN PANEL FIXES ---
+
+// 1. लॉगिन चेक करणे
+window.checkPass = function() {
     const password = document.getElementById('adminPass').value;
     if(password === "vikram123") {
         document.getElementById('adminControls').style.display = 'block';
         document.getElementById('loginArea').style.display = 'none';
     } else { 
-        alert("Wrong Password!"); 
+        alert("चुकीचा पासवर्ड! कृपया पुन्हा प्रयत्न करा."); 
     }
-}
+};
 
-function openAdmin() { 
+// 2. ॲडमिन विंडो उघडणे आणि बंद करणे
+window.openAdmin = function() { 
     document.getElementById('adminModal').style.display = 'flex'; 
-}
+};
 
-function closeAdmin() { 
+window.closeAdmin = function() { 
     document.getElementById('adminModal').style.display = 'none';
-    document.getElementById('loginArea').style.display = 'block';
+    // रिसेट लॉगिन एरिया
     document.getElementById('adminControls').style.display = 'none';
+    document.getElementById('loginArea').style.display = 'block';
     document.getElementById('adminPass').value = '';
-}
+};
 
-function addClient() {
+// 3. नवीन क्लायंट/रिव्ह्यू ॲड करणे
+window.addClient = function() {
     const name = document.getElementById('newClientName').value;
     const review = document.getElementById('newClientReview').value;
-    const imgFile = document.getElementById('newClientImg').files[0];
+    const imgInput = document.getElementById('newClientImg');
     
-    if(!name || !review) return alert("Fill Name and Review!");
-    
-    let clients = JSON.parse(localStorage.getItem('myClients')) || defaultClients;
-    
-    if(imgFile) {
-        const reader = new FileReader();
-        reader.onload = (e) => {
-            clients.push({ 
-                name, 
-                img: e.target.result,
-                review, 
-                stars: 5 
-            });
-            localStorage.setItem('myClients', JSON.stringify(clients));
-            loadClients();
-            document.getElementById('newClientName').value = '';
-            document.getElementById('newClientReview').value = '';
-            document.getElementById('newClientImg').value = '';
-            alert("Review Added!");
-        };
-        reader.readAsDataURL(imgFile);
-    } else {
-        clients.push({ name, img: "pic3.png", review, stars: 5 });
-        localStorage.setItem('myClients', JSON.stringify(clients));
-        loadClients();
-        document.getElementById('newClientName').value = '';
-        document.getElementById('newClientReview').value = '';
-        alert("Review Added!");
+    if(!name || !review) {
+        return alert("कृपया नाव आणि रिव्ह्यू दोन्ही भरा!");
     }
+
+    // LocalStorage मधून जुना डेटा मिळवा
+    let clients = JSON.parse(localStorage.getItem('myClients')) || [];
+
+    if (imgInput.files && imgInput.files[0]) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const newClient = {
+                name: name,
+                img: e.target.result, // Base64 इमेज डेटा
+                review: review
+            };
+            clients.push(newClient);
+            saveAndRefresh(clients);
+        };
+        reader.readAsDataURL(imgInput.files[0]);
+    } else {
+        // जर इमेज नसेल तर डिफॉल्ट इमेज
+        clients.push({ name, img: 'pic3.png', review });
+        saveAndRefresh(clients);
+    }
+};
+
+// 4. डेटा सेव्ह आणि रिफ्रेश करणे
+function saveAndRefresh(clients) {
+    localStorage.setItem('myClients', JSON.stringify(clients));
+    loadClients(); // UI अपडेट करा
+    
+    // इनपुट्स रिकामे करा
+    document.getElementById('newClientName').value = '';
+    document.getElementById('newClientReview').value = '';
+    document.getElementById('newClientImg').value = '';
+    alert("क्लायंट यशस्वीरित्या ॲड झाला!");
 }
 
-function removeClient(index) {
-    if(confirm("Remove review?")) {
-        let clients = JSON.parse(localStorage.getItem('myClients')) || defaultClients;
+// 5. रिव्ह्यू डिलीट करणे
+window.removeClient = function(index) {
+    if(confirm("हा रिव्ह्यू कायमचा काढून टाकायचा का?")) {
+        let clients = JSON.parse(localStorage.getItem('myClients')) || [];
         clients.splice(index, 1);
         localStorage.setItem('myClients', JSON.stringify(clients));
         loadClients();
     }
-}
+};
+
 
 // --- 3. UI Init ---
 document.getElementById('serviceForm').onsubmit = (e) => {
