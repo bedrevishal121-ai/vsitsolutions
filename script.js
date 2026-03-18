@@ -117,7 +117,7 @@ function removeClient(index) {
 document.getElementById('serviceForm').onsubmit = (e) => {
     e.preventDefault();
     const msg = `*NEW INQUIRY*%0AName: ${document.getElementById('custName').value}%0AService: ${document.getElementById('serviceType').value}`;
-    window.open(`https://wa.me{msg}`, '_blank');
+    window.open(`https://wa.me/919730080768`, '_blank');
 };
 
 document.addEventListener('DOMContentLoaded', () => {
