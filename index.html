@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VS IT SOLUTIONS | Vikram Bedre - Enterprise IT Expert</title>
+        <link rel="stylesheet" href="style.css">
+    
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+        <script src="https://unpkg.com/scrollreveal"></script>
+    </head>
+<body>
+    <canvas id="cyberCanvas"></canvas>
+
+    <header class="navbar">
+        <div class="logo-area">
+            <img src="logo.png" alt="VS IT" class="brand-logo">
+            <div class="logo-text">
+                <span class="brand">VS IT <span class="accent">SOLUTIONS</span></span>
+                <p class="motto">Excellence in Digital Infrastructure</p>
+            </div>
+        </div>
+        <nav class="nav-links">
+            <span class="location"><i class="fas fa-map-marker-alt"></i> CBD Belapur</span>
+            <a href="tel:+919730080768" class="cta-call">Consult Vikram</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content reveal">
+            <span class="badge"><i class="fas fa-bolt"></i> Next-Gen IT Infrastructure</span>
+            <h1>Powering Your <span>Business</span> <br> Through Technology</h1>
+            <p>Expert Networking, Server Management, and IT Security Solutions by Vikram Bedare.</p>
+            <div class="btn-group">
+                <a href="#booking" class="btn-primary">Get Started</a>
+                <a href="#about" class="btn-secondary">About Expert</a>
+            </div>
+        </div>
+        <div class="hero-image reveal">
+            <img src="pic3.png" alt="IT Expert" class="expert-img">
+            <div class="hero-glow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-pic-area reveal">
+                <div class="profile-frame">
+                    <img src="vikram.png" alt="Vikram Bedare" class="profile-pic">
+                </div>
+            </div>
+            <div class="about-text reveal">
+                <span class="sub-title">Expert Behind VS IT</span>
+                <h2>Meet <span>Vikram Bedre</span></h2>
+                <p>Enterprise IT Specialist based in CBD Belapur, solving complex networking and server infrastructures.</p>
+                <div class="stats">
+                    <div class="stat-item"><b>100+</b><span>Clients</span></div>
+                    <div class="stat-item"><b>24/7</b><span>Support</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="section-title reveal"><h2>Our Core <span>Expertise</span></h2></div>
+        <div class="service-grid">
+            <div class="s-card reveal"><i class="fas fa-network-wired"></i><h3>Networking</h3><p>Enterprise WiFi & Firewalls.</p></div>
+            <div class="s-card reveal"><i class="fas fa-server"></i><h3>Server Admin</h3><p>Server management & Security.</p></div>
+            <div class="s-card reveal"><i class="fas fa-video"></i><h3>CCTV Systems</h3><p>IP Surveillance & Monitoring.</p></div>
+            <div class="s-card reveal"><i class="fas fa-laptop-medical"></i><h3>Laptop Repair</h3><p>Chip-level repairs & upgrades.</p></div>
+            <div class="s-card reveal"><i class="fas fa-cloud-upload-alt"></i><h3>Data Cloud</h3><p>Backup & Disaster Recovery.</p></div>
+            <div class="s-card reveal"><i class="fas fa-business-time"></i><h3>Corporate AMC</h3><p>Hassle-free office maintenance.</p></div>
+        </div>
+    </section>
+
+   <!-- Client Reviews Section -->
+<section class="clients" id="clients">
+    <div class="section-title reveal">
+        <h2>What Our <span>Clients Say</span></h2>
+    </div>
+    
+    <!-- Wrapper for the sliding effect -->
+    <div class="client-container">
+        <div class="client-track" id="clientDisplay">
+            <!-- Cards will be loaded here via JS -->
+        </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 50px;">
+        <button onclick="openAdmin()" class="btn-secondary" style="font-size: 10px; opacity: 0.3;">Admin Access</button>
+    </div>
+</section>
+
+
+    <!-- Booking -->
+    <section id="booking" class="contact-section">
+        <div class="contact-card reveal">
+            <div class="form-header"><h2>Start a <span>Project</span></h2></div>
+            <form id="serviceForm">
+                <div class="input-row">
+                    <input type="text" id="custName" placeholder="Name / Company" required>
+                    <input type="tel" id="custMobile" placeholder="Contact Number" required>
+                </div>
+                <select id="serviceType" required>
+                    <option value="" disabled selected>Select Service</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Server">Server Management</option>
+                    <option value="CCTV">CCTV Security</option>
+                    <option value="Laptop">Laptop Repairing</option>
+                    <option value="AMC">Corporate AMC</option>
+                </select>
+                <textarea id="custIssue" placeholder="Briefly describe your requirement..." rows="4" required></textarea>
+                <button type="submit" class="submit-btn">Send to WhatsApp <i class="fab fa-whatsapp"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Admin Modal -->
+    <div id="adminModal" class="admin-modal">
+        <div class="admin-content">
+            <h3>Admin Panel</h3>
+            <div id="loginArea">
+                <input type="password" id="adminPass" placeholder="Enter Password">
+                <button id="loginBtn" onclick="checkPass()" class="btn-primary">Login</button>
+            </div>
+            <div id="adminControls" style="display:none; margin-top:20px;">
+                <input type="text" id="newClientName" placeholder="Client Name">
+                <input type="text" id="newClientImg" placeholder="Image URL (or pic3.png)">
+                <textarea id="newClientReview" placeholder="Review text..."></textarea>
+                <button onclick="addClient()" class="btn-primary" style="background:#25d366">Add Client</button>
+                <hr style="margin:20px 0; border-top:1px solid var(--border);">
+                <div id="adminList"></div>
+            </div>
+            <button onclick="closeAdmin()" class="btn-secondary" style="margin-top:10px;">Close</button>
+        </div>
+    </div>
+
+    <footer class="footer"><p>© 2026 <b>VS IT SOLUTIONS</b> | CBD Belapur, Navi Mumbai</p></footer>
+    <a href="https://wa.me" class="floating-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>

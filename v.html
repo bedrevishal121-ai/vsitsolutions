@@ -1,0 +1,477 @@
+```html
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VS IT SOLUTIONS | Vikram Bedre</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<style>
+
+/* GLOBAL */
+
+:root{
+--bg:#030712;
+--primary:#38bdf8;
+--glass:rgba(15,23,42,0.75);
+--border:rgba(255,255,255,0.1);
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+background:var(--bg);
+font-family:'Poppins',sans-serif;
+color:white;
+overflow-x:hidden;
+}
+
+/* CYBER CANVAS */
+
+#cyberCanvas{
+position:fixed;
+top:0;
+left:0;
+z-index:-1;
+}
+
+/* NAVBAR */
+
+.navbar{
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+background:rgba(3,7,18,0.8);
+backdrop-filter:blur(15px);
+border-bottom:1px solid var(--border);
+z-index:1000;
+}
+
+.brand{
+font-size:26px;
+font-weight:800;
+}
+
+.accent{
+color:var(--primary);
+}
+
+.cta-call{
+background:var(--primary);
+padding:10px 22px;
+border-radius:10px;
+color:#000;
+text-decoration:none;
+font-weight:700;
+}
+
+/* HERO */
+
+.hero{
+min-height:90vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+gap:40px;
+}
+
+.hero-content{
+flex:1;
+}
+
+.hero-content h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero-content span{
+color:var(--primary);
+}
+
+.badge{
+background:rgba(56,189,248,0.15);
+color:var(--primary);
+padding:6px 15px;
+border-radius:20px;
+display:inline-block;
+margin-bottom:15px;
+}
+
+.btn-group{
+display:flex;
+gap:15px;
+margin-top:20px;
+}
+
+.btn-primary{
+background:var(--primary);
+padding:14px 25px;
+border-radius:10px;
+color:black;
+text-decoration:none;
+font-weight:700;
+}
+
+.btn-secondary{
+border:1px solid var(--border);
+padding:14px 25px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+}
+
+.hero-image{
+flex:1;
+}
+
+.hero-image img{
+width:100%;
+animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+/* SERVICES */
+
+.services{
+padding:80px 8%;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.s-card{
+background:var(--glass);
+padding:35px;
+border-radius:25px;
+border:1px solid var(--border);
+text-align:center;
+transition:.4s;
+}
+
+.s-card:hover{
+transform:translateY(-10px);
+border-color:var(--primary);
+}
+
+.s-card i{
+font-size:40px;
+color:var(--primary);
+margin-bottom:15px;
+}
+
+/* CONTACT */
+
+.contact-section{
+padding:80px 8%;
+}
+
+.contact-card{
+max-width:750px;
+margin:auto;
+background:var(--glass);
+padding:50px;
+border-radius:30px;
+border:1px solid var(--border);
+}
+
+input,select,textarea{
+width:100%;
+padding:16px;
+margin-bottom:20px;
+border-radius:12px;
+border:1px solid var(--border);
+background:rgba(255,255,255,0.05);
+color:white;
+}
+
+.submit-btn{
+width:100%;
+padding:18px;
+background:#25d366;
+border:none;
+border-radius:12px;
+font-weight:700;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+.footer{
+text-align:center;
+padding:30px;
+color:#94a3b8;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp{
+position:fixed;
+bottom:25px;
+right:25px;
+width:65px;
+height:65px;
+background:#25d366;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+font-size:30px;
+color:white;
+text-decoration:none;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-content h1{
+font-size:2.7rem;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<canvas id="cyberCanvas"></canvas>
+
+<header class="navbar">
+<div class="brand">VS IT <span class="accent">SOLUTIONS</span></div>
+<a href="tel:+919730080768" class="cta-call">Contact</a>
+</header>
+
+
+<section class="hero">
+
+<div class="hero-content reveal">
+
+<span class="badge">Enterprise IT Support</span>
+
+<h1 id="typingText">Reliable IT Infrastructure</h1>
+
+<p>कॉर्पोरेट नेटवर्किंग, सर्व्हर मॅनेजमेंट आणि IT सपोर्ट.</p>
+
+<div class="btn-group">
+<a href="#booking" class="btn-primary">Book Service</a>
+<a href="tel:+919730080768" class="btn-secondary">Call</a>
+</div>
+
+</div>
+
+<div class="hero-image reveal">
+
+<img src="https://cdni.iconscout.com/illustration/premium/thumb/it-support-engineer-4485066-3723279.png">
+
+</div>
+
+</section>
+
+
+<section class="services">
+
+<div class="service-grid">
+
+<div class="s-card reveal">
+<i class="fas fa-network-wired"></i>
+<h3>Networking</h3>
+<p>Office WiFi and firewall setup.</p>
+</div>
+
+<div class="s-card reveal">
+<i class="fas fa-server"></i>
+<h3>Server Setup</h3>
+<p>Linux & Windows server management.</p>
+</div>
+
+<div class="s-card reveal">
+<i class="fas fa-laptop-medical"></i>
+<h3>AMC</h3>
+<p>Corporate IT maintenance services.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="booking" class="contact-section">
+
+<div class="contact-card reveal">
+
+<h2>Start Your Project</h2>
+
+<form id="serviceForm">
+
+<input type="text" id="custName" placeholder="तुमचे नाव" required>
+
+<input type="tel" id="custMobile" placeholder="मोबाईल नंबर" required>
+
+<select id="serviceType">
+
+<option>Networking</option>
+<option>Server Setup</option>
+<option>AMC</option>
+
+</select>
+
+<textarea id="custIssue" placeholder="Problem"></textarea>
+
+<button class="submit-btn">Send WhatsApp Inquiry</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer class="footer">
+© 2026 VS IT SOLUTIONS
+</footer>
+
+<a href="https://wa.me/919730080768" class="floating-whatsapp">
+<i class="fab fa-whatsapp"></i>
+</a>
+
+
+<script>
+
+/* CYBER PARTICLES */
+
+const canvas=document.getElementById("cyberCanvas");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+for(let i=0;i<90;i++){
+
+particles.push({
+
+x:Math.random()*canvas.width,
+y:Math.random()*canvas.height,
+dx:Math.random()*0.6-0.3,
+dy:Math.random()*0.6-0.3
+
+});
+
+}
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach(p=>{
+
+p.x+=p.dx;
+p.y+=p.dy;
+
+ctx.beginPath();
+ctx.arc(p.x,p.y,2,0,Math.PI*2);
+ctx.fillStyle="rgba(56,189,248,0.6)";
+ctx.fill();
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+
+
+/* SCROLL REVEAL */
+
+ScrollReveal().reveal(".reveal",{
+
+distance:"60px",
+duration:1200,
+interval:200
+
+});
+
+
+/* TYPING HERO TEXT */
+
+const text="Reliable IT Infrastructure";
+let i=0;
+
+function typing(){
+
+if(i<text.length){
+
+document.getElementById("typingText").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(typing,70);
+
+}
+
+}
+
+document.getElementById("typingText").innerHTML="";
+typing();
+
+
+
+/* WHATSAPP FORM */
+
+document.getElementById("serviceForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const phone="919730080768";
+
+const name=document.getElementById("custName").value;
+const mobile=document.getElementById("custMobile").value;
+const service=document.getElementById("serviceType").value;
+const issue=document.getElementById("custIssue").value;
+
+const msg=
+`VS IT Inquiry%0AName:${name}%0APhone:${mobile}%0AService:${service}%0AIssue:${issue}`;
+
+window.open(`https://wa.me/${phone}?text=${msg}`,"_blank");
+
+});
+
+</script>
+
+</body>
+</html>
+```
