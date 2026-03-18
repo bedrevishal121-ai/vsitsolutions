@@ -131,7 +131,8 @@
             </div>
             <div id="adminControls" style="display:none; margin-top:20px;">
                 <input type="text" id="newClientName" placeholder="Client Name">
-                <input type="text" id="newClientImg" placeholder="Image URL (or pic3.png)">
+                <label for="newClientImg" style="display: block; margin-top: 10px; font-weight: 600;">Upload Client Image</label>
+            <input type="file" id="newClientImg" accept="image/*" style="margin-bottom: 10px;">
                 <textarea id="newClientReview" placeholder="Review text..."></textarea>
                 <button onclick="addClient()" class="btn-primary" style="background:#25d366">Add Client</button>
                 <hr style="margin:20px 0; border-top:1px solid var(--border);">
