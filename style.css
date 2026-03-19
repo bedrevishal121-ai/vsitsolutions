@@ -33,16 +33,62 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
-.logo-area { display: flex; align-items: center; gap: 12px; }
-.brand-logo { height: 50px; filter: drop-shadow(0 0 8px var(--primary)); }
-.brand { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 800; }
-.accent { color: var(--primary); }
-.motto { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
+/* --- सुधारित CSS --- */
 
-.nav-links { display: flex; align-items: center; gap: 25px; }
-.location { font-size: 13px; color: var(--primary); font-weight: 600; }
-.cta-call { background: var(--primary); color: #000; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 14px; transition: 0.3s; box-shadow: 0 0 15px rgba(14, 165, 233, 0.3); }
-.cta-call:hover { transform: scale(1.05); background: var(--accent); }
+.logo-area { 
+    display: flex; 
+    align-items: center; 
+    gap: 15px; /* लोगो आणि नावामध्ये थोडी जास्त जागा */
+}
+
+.brand-logo { 
+    height: 55px; /* थोडी हाईट वाढवली */
+    width: auto;
+    object-fit: contain;
+    /* निळा ग्लो (Glow) इफेक्ट */
+    filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.4)); 
+    transition: transform 0.3s ease;
+}
+
+.brand-logo:hover {
+    transform: rotate(-5deg) scale(1.1); /* लोगोवर माऊस नेल्यास हलका इफेक्ट */
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1; /* नाव आणि मोटो मधील अंतर कमी करण्यासाठी */
+}
+
+.brand { 
+    font-family: 'Outfit', sans-serif; 
+    font-size: 24px; 
+    font-weight: 800; 
+    letter-spacing: 0.5px;
+    color: #ffffff; /* मुख्य पांढरा रंग */
+}
+
+.accent { 
+    color: var(--primary); 
+    text-shadow: 0 0 10px rgba(14, 165, 233, 0.3);
+}
+
+.motto { 
+    font-size: 9px; 
+    color: var(--text-dim); 
+    text-transform: uppercase; 
+    letter-spacing: 2.5px; /* प्रोफेशनल लूकसाठी जास्त लेटर स्पेसिंग */
+    margin-top: 4px;
+    opacity: 0.8;
+}
+
+/* मोबाईलसाठी रिस्पॉन्सिव्ह सेटिंग */
+@media (max-width: 768px) {
+    .brand { font-size: 20px; }
+    .motto { display: none; } /* मोबाईलवर जागा वाचवण्यासाठी मोटो लपवू शकता */
+    .brand-logo { height: 45px; }
+}
+
 
 /* --- 4. HERO SECTION --- */
 .hero { 
