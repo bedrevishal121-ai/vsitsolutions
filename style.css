@@ -1,15 +1,12 @@
 /* --- 1. GLOBAL SETTINGS & PREMIUM PALETTE --- */
 :root {
     --bg: #020617;        /* Deep Obsidian */
-    /* लोगोमधील रंगांनुसार अपडेट केलेले प्रायमरी कलर्स */
-    --primary: #2b3990;   /* Logo Navy Blue */
-    --accent: #00aeef;    /* Logo Electric Cyan */
+    --primary: #0ea5e9;   /* Electric Blue */
+    --accent: #22d3ee;    /* Cyan Glow */
     --glass: rgba(15, 23, 42, 0.8);
-    --border: rgba(0, 174, 239, 0.2); /* बॉर्डरला लोगोचा निळा टच */
+    --border: rgba(14, 165, 233, 0.2);
     --text-main: #f8fafc;
     --text-dim: #94a3b8;
-    /* लोगो ग्रेडियंट */
-    --logo-grad: linear-gradient(135deg, #2b3990 0%, #00aeef 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -22,7 +19,7 @@ body {
     line-height: 1.6;
 }
 
-/* --- 2. BACKGROUND CANVAS (No Change) --- */
+/* --- 2. BACKGROUND CANVAS --- */
 #cyberCanvas {
     position: fixed; top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1; background: radial-gradient(circle at center, #060b1d 0%, #020617 100%);
@@ -36,67 +33,16 @@ body {
     border-bottom: 1px solid var(--border);
 }
 
-/* --- 4. LOGO AREA UPDATED --- */
-.logo-area { 
-    display: flex; 
-    align-items: center; 
-    gap: 15px; 
-}
+.logo-area { display: flex; align-items: center; gap: 12px; }
+.brand-logo { height: 50px; filter: drop-shadow(0 0 8px var(--primary)); }
+.brand { font-family: 'Outfit', sans-serif; font-size: 26px; font-weight: 800; }
+.accent { color: var(--primary); }
+.motto { font-size: 10px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
 
-.brand-logo { 
-    height: 58px; /* लोगो व्यवस्थित दिसण्यासाठी थोडी साईज वाढवली */
-    width: auto;
-    object-fit: contain;
-    /* लोगोच्या इलेक्ट्रिक ब्लू रंगाचा ग्लो */
-    filter: drop-shadow(0 0 10px rgba(0, 174, 239, 0.4)); 
-    transition: transform 0.3s ease;
-}
-
-.brand-logo:hover {
-    transform: scale(1.08) rotate(2deg); /* हलका आणि प्रोफेशनल मूव्हमेंट */
-}
-
-.logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1; 
-}
-
-.brand { 
-    font-family: 'Outfit', sans-serif; 
-    font-size: 25px; 
-    font-weight: 800; 
-    letter-spacing: 0.5px;
-    color: #ffffff; 
-}
-
-/* SOLUTIONS शब्दाला लोगोसारखा ग्रेडियंट लूक दिला आहे */
-.accent { 
-    background: var(--logo-grad);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 900;
-}
-
-.motto { 
-    font-size: 9.5px; 
-    color: var(--accent); /* मोटो लोगोच्या ब्राइट निळ्या रंगात */
-    text-transform: uppercase; 
-    letter-spacing: 2.8px; 
-    margin-top: 5px;
-    font-weight: 600;
-    opacity: 0.9;
-}
-
-/* --- 5. RESPONSIVE --- */
-@media (max-width: 768px) {
-    .navbar { padding: 12px 5%; }
-    .brand { font-size: 20px; }
-    .motto { display: none; } 
-    .brand-logo { height: 45px; }
-}
-
-
+.nav-links { display: flex; align-items: center; gap: 25px; }
+.location { font-size: 13px; color: var(--primary); font-weight: 600; }
+.cta-call { background: var(--primary); color: #000; padding: 12px 24px; border-radius: 12px; text-decoration: none; font-weight: 800; font-size: 14px; transition: 0.3s; box-shadow: 0 0 15px rgba(14, 165, 233, 0.3); }
+.cta-call:hover { transform: scale(1.05); background: var(--accent); }
 
 /* --- 4. HERO SECTION --- */
 .hero { 
