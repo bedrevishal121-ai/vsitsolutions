@@ -1,150 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>VS IT SOLUTIONS | Vikram Bedre - Enterprise IT Expert</title>
-        <link rel="stylesheet" href="style.css">
-    
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-        <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-        <script src="https://unpkg.com/scrollreveal"></script>
-    </head>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="VS IT Solutions provides networking, server management, CCTV, laptop repair and corporate AMC services in CBD Belapur, Navi Mumbai.">
+  <title>VS IT Solutions | Enterprise IT Support in Navi Mumbai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/scrollreveal" defer></script>
+  <script src="script.js" defer></script>
+</head>
 <body>
-    <canvas id="cyberCanvas"></canvas>
+  <canvas id="cyberCanvas" aria-hidden="true"></canvas>
 
-    <header class="navbar">
-        <div class="logo-area">
-            <img src="logo.png.png" alt="VS IT" class="brand-logo">
-            <div class="logo-text">
-                <span class="brand">VS IT <span class="accent">SOLUTIONS</span></span>
-                <p class="motto">Excellence in Digital Infrastructure</p>
-            </div>
-        </div>
-        <nav class="nav-links">
-            <span class="location"><i class="fas fa-map-marker-alt"></i> CBD Belapur</span>
-            <a href="tel:+919730080768" class="cta-call">Consult Vikram</a>
-        </nav>
-    </header>
+  <a class="skip-link" href="#main-content">मुख्य मजकुराकडे जा</a>
 
-    <section class="hero">
-        <div class="hero-content reveal">
-            <span class="badge"><i class="fas fa-bolt"></i> Next-Gen IT Infrastructure</span>
-            <h1>Powering Your <span>Business</span> <br> Through Technology</h1>
-            <p>Expert Networking, Server Management, and IT Security Solutions by Vikram Bedare.</p>
-            <div class="btn-group">
-                <a href="#booking" class="btn-primary">Get Started</a>
-                <a href="#about" class="btn-secondary">About Expert</a>
-            </div>
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#top" aria-label="VS IT Solutions home">
+      <img src="logo.png.png" alt="VS IT Solutions logo">
+      <span><strong>VS IT <em>SOLUTIONS</em></strong><small>Trusted IT Infrastructure</small></span>
+    </a>
+    <nav class="nav-links" aria-label="मुख्य नेव्हिगेशन">
+      <a href="#services">सेवा</a>
+      <a href="#about">आमच्याबद्दल</a>
+      <a href="#clients">क्लायंट रिव्ह्यू</a>
+      <a href="#booking" class="nav-cta"><i class="fa-solid fa-phone"></i> WhatsApp वर संपर्क</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="मेनू उघडा" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <div class="hero-content reveal">
+        <span class="eyebrow"><i class="fa-solid fa-shield-halved"></i> व्यवसायासाठी विश्वसनीय IT समर्थन</span>
+        <h1>आपला तांत्रिक भागीदार,<br><span>आपल्या व्यावसायिक वाढीसाठी.</span></h1>
+        <p>CBD बेलापूर आणि Navi Mumbai मध्ये नेटवर्किंग, सर्व्हर व्यवस्थापन, CCTV आणि कॉर्पोरेट IT समाधान — जलद आणि विश्वासू सेवा.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="button button-primary">मोफत मार्गदर्शन मिळवा <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="tel:+919730080768" class="button button-secondary"><i class="fa-solid fa-phone"></i> कॉल करा</a>
         </div>
-        <div class="hero-image reveal">
-            <img src="pic3.png" alt="IT Expert" class="expert-img">
-            <div class="hero-glow"></div>
+        <div class="trust-row">
+          <span><i class="fa-solid fa-circle-check"></i> अनुभवी तांत्रिक समर्थन</span>
+          <span><i class="fa-solid fa-circle-check"></i> त्वरित प्रतिसाद</span>
         </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-ring"></div>
+        <img src="pic3.png" alt="Professional IT infrastructure support">
+        <div class="status-card status-card-top">
+          <i class="fa-solid fa-headset"></i>
+          <span><strong>24/7</strong><small>Support Assistance</small></span>
+        </div>
+        <div class="status-card status-card-bottom">
+          <i class="fa-solid fa-building-shield"></i>
+          <span><strong>Enterprise</strong><small>IT Infrastructure</small></span>
+        </div>
+      </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="about-container">
-            <div class="about-pic-area reveal">
-                <div class="profile-frame">
-                    <img src="vikram.png" alt="Vikram Bedare" class="profile-pic">
-                </div>
-            </div>
-            <div class="about-text reveal">
-                <span class="sub-title">Expert Behind VS IT</span>
-                <h2>Meet <span>Vikram Bedre</span></h2>
-                <p>Enterprise IT Specialist based in CBD Belapur, solving complex networking and server infrastructures.</p>
-                <div class="stats">
-                    <div class="stat-item"><b>100+</b><span>Clients</span></div>
-                    <div class="stat-item"><b>24/7</b><span>Support</span></div>
-                </div>
-            </div>
+    <section class="about section" id="about">
+      <div class="about-grid">
+        <div class="profile-wrap reveal">
+          <div class="profile-glow"></div>
+          <img src="vikram.png" alt="Vikram Bedre, VS IT Solutions">
         </div>
+        <div class="about-copy reveal">
+          <span class="section-label">आमच्याबद्दल</span>
+          <h2>Vikram Bedre</h2>
+          <p class="role">Enterprise IT & Infrastructure Specialist</p>
+          <p>VS IT Solutions हा CBD बेलापूर स्थित IT सेवा प्रदाता आहे. कार्यालये, रिटेल तसेच कॉर्पोरेट ग्राहकांसाठी सुरक्षित नेटवर्क, स्थिर सर्व्हर आणि कार्यक्षम सिस्टीम उपलब्ध करून देतो.</p>
+          <div class="feature-list">
+            <span><i class="fa-solid fa-check"></i> योग्य समाधानसाठी स्पष्ट मार्गदर्शन</span>
+            <span><i class="fa-solid fa-check"></i> व्यवस्थित प्रकल्प आणि वेळेवर अंमलबजावणी</span>
+            <span><i class="fa-solid fa-check"></i> सेवेनंतरसुद्धा विश्वासार्ह सपोर्ट</span>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
-        <div class="section-title reveal"><h2>Our Core <span>Expertise</span></h2></div>
-        <div class="service-grid">
-            <div class="s-card reveal"><i class="fas fa-network-wired"></i><h3>Networking</h3><p>Enterprise WiFi & Firewalls.</p></div>
-            <div class="s-card reveal"><i class="fas fa-server"></i><h3>Server Admin</h3><p>Server management & Security.</p></div>
-            <div class="s-card reveal"><i class="fas fa-video"></i><h3>CCTV Systems</h3><p>IP Surveillance & Monitoring.</p></div>
-            <div class="s-card reveal"><i class="fas fa-laptop-medical"></i><h3>Laptop Repair</h3><p>Chip-level repairs & upgrades.</p></div>
-            <div class="s-card reveal"><i class="fas fa-cloud-upload-alt"></i><h3>Data Cloud</h3><p>Backup & Disaster Recovery.</p></div>
-            <div class="s-card reveal"><i class="fas fa-business-time"></i><h3>Corporate AMC</h3><p>Hassle-free office maintenance.</p></div>
-        </div>
+    <section class="services section" id="services">
+      <div class="section-heading reveal">
+        <span class="section-label">आपल्यासाठी सेवा</span>
+        <h2>आपल्या उद्योगासाठी <em>IT सेवा</em></h2>
+        <p>प्रकल्पाची गरज समजून घ्या — मग योग्य आणि सुरक्षित तांत्रिक उपाय सुचवा.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-network-wired"></i></div><h3>Networking</h3><p>Office LAN, enterprise Wi-Fi, switches, routers आणि firewall configuration.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-server"></i></div><h3>Server Management</h3><p>Windows आणि Linux server setup, monitoring, backup आणि security hardening.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-video"></i></div><h3>CCTV Systems</h3><p>IP CCTV planning, installation, DVR/NVR आणि दूरस्थ viewing setup.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-laptop-medical"></i></div><h3>Laptop Repair</h3><p>Diagnose, hardware replacement, chip-level repair आणि component upgrade.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div><h3>Backup & Cloud</h3><p>डेटा backup, recovery planning आणि सुरक्षित cloud migration support.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="service-card reveal"><div class="service-icon"><i class="fa-solid fa-business-time"></i></div><h3>Corporate AMC</h3><p>सुव्यवस्थित preventive maintenance आणि नियमित IT system support.</p><a href="#booking">सेवा विचारणा <i class="fa-solid fa-arrow-right"></i></a></article>
+      </div>
     </section>
 
-   <!-- Client Reviews Section -->
-<section class="clients" id="clients">
-    <div class="section-title reveal">
-        <h2>What Our <span>Clients Say</span></h2>
-    </div>
-    
-    <!-- Wrapper for the sliding effect -->
-    <div class="client-container">
-        <div class="client-track" id="clientDisplay">
-            <!-- Cards will be loaded here via JS -->
-        </div>
-    </div>
-    
-    <div style="text-align: center; margin-top: 50px;">
-        <button onclick="openAdmin()" class="btn-secondary" style="font-size: 10px; opacity: 0.3;">Admin Access</button>
-    </div>
-</section>
-
-
-    <!-- Booking -->
-    <section id="booking" class="contact-section">
-        <div class="contact-card reveal">
-            <div class="form-header"><h2>Start a <span>Project</span></h2></div>
-            <form id="serviceForm">
-                <div class="input-row">
-                    <input type="text" id="custName" placeholder="Name / Company" required>
-                    <input type="tel" id="custMobile" placeholder="Contact Number" required>
-                </div>
-                <select id="serviceType" required>
-                    <option value="" disabled selected>Select Service</option>
-                    <option value="Networking">Networking</option>
-                    <option value="Server">Server Management</option>
-                    <option value="CCTV">CCTV Security</option>
-                    <option value="Laptop">Laptop Repairing</option>
-                    <option value="AMC">Corporate AMC</option>
-                </select>
-                <textarea id="custIssue" placeholder="Briefly describe your requirement..." rows="4" required></textarea>
-                <button  type="submit" class="submit-btn">Send to WhatsApp <i class="fab fa-whatsapp"></i></button>
-            </form>
-        </div>
+    <section class="clients section" id="clients">
+      <div class="section-heading reveal">
+        <span class="section-label">ग्राहक अनुभव</span>
+        <h2>विश्वासाचे <em>संबंध</em></h2>
+      </div>
+      <div class="client-track" id="clientDisplay" aria-label="क्लायंट रिव्ह्यू"></div>
     </section>
 
-    <!-- Admin Modal -->
-    <div id="adminModal" class="admin-modal">
-        <div class="admin-content">
-            <h3>Admin Panel</h3>
-            <div id="loginArea">
-                <input type="password" id="adminPass" placeholder="Enter Password">
-                <button id="loginBtn" onclick="checkPass()" class="btn-primary">Login</button>
-            </div>
-            <div id="adminControls" style="display:none; margin-top:20px;">
-                <input type="text" id="newClientName" placeholder="Client Name">
-                <label for="newClientImg" style="display: block; margin-top: 10px; font-weight: 600;">Upload Client Image</label>
-            <input type="file" id="newClientImg" accept="image/*" style="margin-bottom: 10px;">
-                <textarea id="newClientReview" placeholder="Review text..."></textarea>
-                <button onclick="addClient()" class="btn-primary" style="background:#25d366">Add Client</button>
-                <hr style="margin:20px 0; border-top:1px solid var(--border);">
-                <div id="adminList"></div>
-            </div>
-            <button onclick="closeAdmin()" class="btn-secondary" style="margin-top:10px;">Close</button>
+    <section class="booking section" id="booking">
+      <div class="booking-grid">
+        <div class="booking-copy reveal">
+          <span class="section-label">आपली सेवा निवडा</span>
+          <h2>तुमची IT समस्या<br><em>काय आहे?</em></h2>
+          <p>सविस्तर माहिती पाठवा. आमचा तज्ञ लवकरात लवकर WhatsApp वर संपर्क करेल.</p>
+          <div class="contact-list">
+            <a href="tel:+919730080768"><i class="fa-solid fa-phone"></i><span><small>Phone</small><strong>+91 97300 80768</strong></span></a>
+            <a href="https://maps.google.com/?q=CBD+Belapur,+Navi+Mumbai" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i><span><small>Location</small><strong>CBD Belapur, Navi Mumbai</strong></span></a>
+          </div>
         </div>
-    </div>
+        <form class="booking-form reveal" id="serviceForm">
+          <label for="custName">नाव / कंपनीचे नाव</label>
+          <input type="text" id="custName" name="name" autocomplete="name" placeholder="उदा. Rahul Enterprises" required>
 
-    <footer class="footer"><p>© 2026 <b>VS IT SOLUTIONS</b> | CBD Belapur, Navi Mumbai</p></footer>
-    <a href="https://wa.me/919730080768" class="floating-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <label for="custMobile">मोबाइल नंबर</label>
+          <input type="tel" id="custMobile" name="phone" autocomplete="tel" inputmode="tel" pattern="[0-9+ -]{10,15}" placeholder="उदा. 9876543210" required>
 
-    <script src="script.js"></script>
+          <label for="serviceType">आवश्यक सेवा</label>
+          <select id="serviceType" name="service" required>
+            <option value="" disabled selected>सेवा निवडा</option>
+            <option>Networking</option><option>Server Management</option><option>CCTV Security</option><option>Laptop Repair</option><option>Data Backup / Cloud</option><option>Corporate AMC</option>
+          </select>
+
+          <label for="custIssue">तुमची आवश्यकता</label>
+          <textarea id="custIssue" name="message" rows="4" placeholder="संक्षिप्त माहिती लिहा..." required></textarea>
+          <button type="submit" class="button button-primary submit-btn"><i class="fa-brands fa-whatsapp"></i> WhatsApp वर पाठवा</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><strong>VS IT <em>SOLUTIONS</em></strong><p>Reliable IT Infrastructure & Support</p></div>
+    <p>© <span id="currentYear">2026</span> VS IT SOLUTIONS. सर्व हक्क राखीव.</p>
+  </footer>
+
+  <a href="https://wa.me/919730080768" class="floating-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp वर संपर्क करा"><i class="fa-brands fa-whatsapp"></i></a>
 </body>
 </html>
